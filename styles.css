@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fonts/Quicksand-Light.otf");
+}
+
+@font-face {
+    font-family: "Quicksand-italic";
+    src: url("../fonts/Quicksand-Italic.otf");
+}
+
+body {
+    background-image: url(imagenes/pared-ladrillo.webp);
+}
+
+.container {
+    height: 135vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0.25fr 0.15fr 1fr 0.2fr;
+    grid-template-areas:
+        "header header"
+        "menu menu"
+        "contenido contenido"
+        "footer footer";
+}
+
+header img {
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
+
+    margin-left: 80px;
+}
+
+
+.container .heading {
+    grid-area: "header";
+    display: flex;
+    grid-column: 1/3;
+    justify-content: left;
+
+}
+
+.container .menu {
+    grid-area: menu;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+}
+
+.container .contenido {
+    grid-area: "contenido";
+    grid-column: 1/3;
+}
+
+.container .pie {
+    grid-area: "footer";
+    grid-column: 1/3;
+}
+
+.heading h1 {
+    font-size: 50px;
+    font-family: "Quicksand";
+
+}
+
+.heading h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 11px;
+    font-family: "Quicksand";
+    font-size: 20px;
+}
+
+
+.container .fotos {
+    grid-area: "contenido";
+    grid-column: 1/3;
+
+}
+
+.container .consulta {
+    grid-area: "contenido";
+    grid-column: 1/3;
+}
+
+.container .lista1 {
+    grid-area: "contenido";
+    grid-column: 1/3;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    font-family: "Quicksand";
+}
+
+.menu nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+
+}
+
+.menu ul {
+    list-style-type: none;
+
+    padding: 5px;
+    position: relative;
+    bottom: 0px;
+
+}
+
+.menu ul li {
+
+    margin: 3px;
+    padding: 5px;
+
+
+
+}
+
+a:hover {
+    color: gray;
+}
+
+.central {
+    padding-top: 10px;
+    width: 100%;
+    margin: 10 0 30px 0;
+    height: 30rem;
+}
+
+.pie {
+
+    margin-top: 15px;
+    padding-left: 10px;
+    position: absolute;
+    right: 0px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.pie a {
+
+
+    padding-right: 5px;
+    color: black;
+}
+
+.pie legend {
+    text-align: center;
+    position: relative;
+    left: 0px;
+    font-size: 15px;
+}
+
+.presentacion {
+    text-align: justify;
+    display: inline;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presentacion h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.presentacion p {
+    padding-top: 10px;
+    text-align: center;
+}
+
+h2 {
+
+    padding-top: 10px;
+    font-family: "Quicksand-italic";
+}
+
+.fotos {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+
+
+.foto1 {
+    height: 150px;
+    width: 150px;
+}
+
+.foto2 {
+    height: 150px;
+    width: 130px;
+
+}
+
+.consulta {
+
+    height: 310px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    background-color: lightgray;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+
+.consulta legend {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.consulta1 {
+
+    width: 10rem;
+    border: 1px solid darkslateblue;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.consulta p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 10px;
+}
+
+.consulta textarea {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid darkslateblue;
+}
+
+
+article {
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+article h2 {
+    padding-bottom: 15px;
+}
+
+article p {
+    font-size: 18px;
+    background-color: rgb(204, 197, 186);
+    font-family: "Quicksand";
+}
+
+
+.lista1 {
+    display: inline-block;
+    text-align: center;
+
+
+
+}
+
+.subtitulo2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.lista1 li {
+    padding: 3px;
+}
+
+.lista1 ul p {
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: grid;
+
+        height: 140vh;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.fr 0.20fr 1fr 0.2fr;
+        grid-template-areas: "header header"
+            "menu menu"
+            "contenido contenido"
+            "footer footer";
+
+
+    }
+
+    .container .heading {
+
+        grid-area: "header";
+        display: flex;
+        justify-content: center;
+        grid-column: 1/3;
+
+
+    }
+
+    header img {
+        margin-left: 41%;
+        margin-right: 48%;
+
+
+    }
+
+    .heading h1 {
+        font-size: 65px;
+
+    }
+
+    .heading h2 {
+        grid-area: "header";
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+    }
+
+    .container .pie {
+
+        grid-area: "footer";
+        grid-column: 1/3;
+
+
+
+
+
+    }
+
+    .menu {
+        display: inline-flex;
+        grid-area: menu;
+        justify-content: space-around;
+        height: min-content;
+
+    }
+
+    .menu a {
+        font-size: 20px;
+    }
+
+    .menu ul {
+        display: inline-flex;
+
+    }
+
+    article {
+        grid-area: "contenido";
+        grid-column: 1/3;
+
+    }
+
+    .foto1 {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .foto2 {
+        height: 20rem;
+        width: 20rem;
+    }
+
+
+}
