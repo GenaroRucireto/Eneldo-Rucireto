@@ -77,10 +77,10 @@ header img {
 
 h1 {
     animation-duration: 3s;
-    animation-name: slidein;
+    animation-name: slide;
 }
 
-@keyframes slidein {
+@keyframes slide {
     from {
         margin-left: 100%;
         width: 300%
@@ -122,13 +122,14 @@ h1 {
         color: #000000;
         font-size: 15px;
         font-family: "Quicksand";
-    }
+        }
 
     .menu nav {
         display: flex;
         justify-content: space-between;
-        padding-top: 15px;
-
+       margin-top: 10px;
+        background-image: linear-gradient(#bdc3c7,#2c3e50);
+        border-radius: 10px;
     }
 
     .menu ul {
@@ -150,7 +151,7 @@ h1 {
     }
 
     a:hover {
-        color: gray;
+        color: white;
     }
 
     .central {
@@ -238,6 +239,7 @@ h1 {
         padding-top: 10px;
         margin-top: 20px;
         border-radius: 10px;
+        background-image: linear-gradient(#bdc3c7,#2c3e50);
 
     }
 
