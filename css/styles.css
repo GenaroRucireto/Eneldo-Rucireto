@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fonts/Quicksand-Light.otf");
+}
+
+@font-face {
+    font-family: "Quicksand-italic";
+    src: url("../fonts/Quicksand-Italic.otf");
+}
+
+body {
+    padding: 0;
+}
+
+.container {
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas:
+        "contenido contenido"
+        "footer footer";
+}
+
+.container .contenido {
+    grid-area: "contenido";
+    grid-column: 1/3;
+}
+
+footer {
+    grid-area: "footer";
+    grid-column: 1/3;
+}
+
+.container .pie {
+    grid-area: "footer";
+    grid-column: 1/3;
+    margin-top: 1rem;
+
+}
+
+.container .fotos {
+    grid-area: "contenido";
+    grid-column: 1/3;
+}
+
+.container .consulta {
+    grid-area: "contenido";
+    grid-column: 1/3;
+}
+
+.container .lista1 {
+    grid-area: "contenido";
+    grid-column: 1/3;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-family: "Quicksand";
+}
+
+a {
+    background-image: linear-gradient(gray, rgb(134, 126, 126));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+a:hover,
+a:focus {
+    background-size: 100% 2px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.nombre {
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Quicksand";
+    background-color: #f1faee;
+    margin-top: 0;
+}
+
+.nombre h2 {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family: "Quicksand";
+    margin-bottom: 0;
+}
+
+.img-fluid {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+    height: 20rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #f1faee;
+}
+
+.pie {
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.pie a {
+    width: 300px;
+    padding-right: 5px;
+    color: black;
+}
+
+.pie legend {
+    font-size: 15px;
+}
+
+.presentacion {
+    text-align: justify;
+    display: inline;
+    width: 300px;
+}
+
+.presentacion h2 {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Quicksand";
+}
+
+.presentacion p {
+    padding-top: 10px;
+    text-align: center;
+    font-family: "Quicksand-italic";
+}
+
+p {
+    animation-duration: 4s;
+    animation-name: animTexto;
+    margin: 20px;
+}
+
+@keyframes animTexto {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.container #carouselExampleIndicators {
+    grid-area: "contenido";
+    grid-column: 1/3;
+}
+
+#carouselExampleIndicators {
+    height: 50vh;
+}
+
+.slide {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.slide img {
+    width: 50vh;
+    height: 50vw;
+}
+
+.consulta {
+    height: 310px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 35px;
+    background-color: lightgray;
+    padding-top: 10px;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-image: linear-gradient(#ebf4f5, #b5c6e0);
+}
+
+.container .contacto {
+    grid-area: "contenido";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/3;
+}
+
+.contacto {
+    margin-bottom: 15px;
+}
+
+.consulta legend {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.consulta p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 10px;
+}
+
+.consulta textarea {
+    width: 10rem;
+    height: 5rem;
+    border-radius: 5px;
+    border: 1px solid darkslateblue;
+}
+
+.mb-3 .btn {
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+    color: #000000;
+}
+
+article {
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+article h2 {
+    padding-bottom: 15px;
+}
+
+article p {
+    font-size: 18px;
+    background-color: lightgray;
+    font-family: "Quicksand";
+}
+
+.lista1 {
+    display: inline-block;
+    text-align: center;
+}
+
+.subtitulo2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.lista1 li {
+    padding: 3px;
+}
+
+.lista1 ul {
+    padding-left: 0;
+}
+
+.lista1 ul p {
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 577px) {
+
+    .container {
+        display: grid;
+        height: 140vh;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr;
+        grid-template-areas:
+            "contenido contenido"
+            "footer footer";
+    }
+
+    #carouselExampleIndicators {
+        height: 100vh;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .slide {
+        height: 60vh !important;
+        width: 55vw !important;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid#000000;
+    }
+
+    .slide img {
+        height: 59vh;
+        width: 54vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: grid;
+        height: 140vh;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr;
+        grid-template-areas:
+            "contenido contenido"
+            "footer footer";
+    }
+
+    .presentacion h2 {
+        margin-top: 80px;
+    }
+
+    .presentacion p {
+        justify-content: center;
+        margin-top: 20px;
+        width: auto;
+
+    }
+
+    .container .pie {
+        grid-area: "footer";
+        grid-column: 1/3;
+        margin-top: 1rem;
+
+    }
+
+    footer {
+        grid-area: "footer";
+        grid-column: 1/3;
+    }
+
+
+    .nombre h1 {
+        font-size: 50px;
+    }
+
+    .nombre h2 {
+        font-size: 23px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    .d-flex {
+        width: 10rem;
+    }
+
+    article {
+        grid-area: "contenido";
+        grid-column: 1/3;
+    }
+
+
+    .consulta {
+        width: 20rem;
+        height: 25rem;
+    }
+
+    .form-control {
+        width: 16rem;
+    }
+
+    #exampleFormControlTextarea1 {
+        width: 16rem;
+        height: 10rem;
+    }
+
+    .consulta legend {
+        font-size: 20px;
+    }
+
+    #carouselExampleIndicators {
+        height: min-content;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .slide {
+        height: 60vh !important;
+        width: 55vw !important;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid#000000;
+    }
+
+    .slide img {
+        height: 59vh;
+    }
+}

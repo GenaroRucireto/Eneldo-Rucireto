@@ -16,7 +16,6 @@
 
 body {
     padding: 0;
-
 }
 
 .container {
@@ -93,7 +92,6 @@ h2 {
     font-family: "Quicksand";
     background-color: #f1faee;
     margin-top: 0;
-
 }
 
 .nombre h2 {
@@ -114,7 +112,6 @@ footer {
     display: flex;
     justify-content: center;
     background-color: #f1faee;
-
 }
 
 .pie {
@@ -140,7 +137,6 @@ footer {
     text-align: justify;
     display: inline;
     width: 300px;
-
 }
 
 .presentacion h2 {
@@ -178,7 +174,6 @@ p {
     grid-column: 1/3;
 }
 
-
 #carouselExampleIndicators {
     height: 50vh;
 }
@@ -188,7 +183,6 @@ p {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
-
 }
 
 .slide img {
@@ -263,7 +257,6 @@ article p {
     font-family: "Quicksand";
 }
 
-
 .lista1 {
     display: inline-block;
     text-align: center;
@@ -332,7 +325,6 @@ article p {
         grid-template-areas:
             "contenido contenido"
             "footer footer";
-
     }
 
     .presentacion h2 {
@@ -416,7 +408,4 @@ article p {
     .slide img {
         height: 59vh;
     }
-
-
-
 }
