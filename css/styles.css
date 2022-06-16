@@ -37,16 +37,13 @@ body {
     grid-area: "footer";
     grid-column: 1/3;
     margin-top: 1rem; }
-  .container .fotos {
-    grid-area: "contenido";
-    grid-column: 1/3; }
   .container .consulta {
     grid-area: "contenido";
     grid-column: 1/3; }
   .container .lista1 {
     grid-area: "contenido";
     grid-column: 1/3; }
-  .container #carouselExampleIndicators {
+  .container .tarjeta {
     grid-area: "contenido";
     grid-column: 1/3; }
   .container .contacto {
@@ -55,6 +52,13 @@ body {
     justify-content: center;
     align-items: center;
     grid-column: 1/3; }
+
+.tarjeta {
+  display: flex;
+  flex-direction: column; }
+  .tarjeta .col {
+    display: flex;
+    justify-content: center !important; }
 
 footer {
   grid-area: "footer";
@@ -68,7 +72,7 @@ a {
   color: #000000;
   font-size: 14px;
   font-family: "Quicksand";
-  background-image: linear-gradient(#ebf4f5, #387fe9);
+  background-image: linear-gradient(#bde0fe, #a2d2ff);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
@@ -94,7 +98,7 @@ h2 {
     margin-bottom: 0; }
 
 .img-fluid {
-  width: 100%;
+  width: auto;
   margin-top: 30px;
   padding: 0;
   height: 20rem; }
@@ -131,29 +135,16 @@ p {
   animation-name: animTexto;
   margin: 20px; }
 
-#carouselExampleIndicators {
-  height: 50vh; }
-
-.slide {
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 100px; }
-  .slide img {
-    width: 50vh;
-    height: 50vw; }
-
 .consulta {
   height: 310px;
   width: 220px;
   margin-left: auto;
   margin-right: auto;
   padding: 35px;
-  background-color: lightgray;
   padding-top: 10px;
   margin-top: 40px;
   border-radius: 10px;
-  background-image: linear-gradient(#ebf4f5, #b5c6e0); }
+  background-color: #bbd2f5; }
   .consulta legend {
     text-align: center;
     padding-bottom: 10px;
@@ -171,11 +162,14 @@ p {
 .contacto {
   margin-bottom: 15px; }
 
-.mb-3 .btn {
-  justify-content: center;
-  align-items: center;
+.mb-3 .botones, .mb-3 .btn {
   margin-top: 7px;
-  color: #000000; }
+  color: #000000;
+  text-align: center; }
+
+.mb-3 .btn {
+  background-color: #84c8df;
+  border: solid 1px white; }
 
 article {
   display: inline-block;
@@ -185,7 +179,7 @@ article {
     padding-bottom: 15px; }
   article p {
     font-size: 18px;
-    background-color: lightgray;
+    background-color: #caf0f8;
     font-family: "Quicksand"; }
 
 .lista1 {
@@ -200,6 +194,24 @@ article {
       padding-top: 3px;
       font-size: 18px;
       text-decoration: underline; }
+    .lista1 ul .li1 {
+      font-size: 15px;
+      color: green; }
+    .lista1 ul .li2 {
+      font-size: 15px;
+      color: #2e7a2e; }
+    .lista1 ul .li3 {
+      font-size: 15px;
+      color: #0df30d; }
+    .lista1 ul .li4 {
+      font-size: 15px;
+      color: #045504; }
+    .lista1 ul .li5 {
+      font-size: 15px;
+      color: #84ec84; }
+    .lista1 ul .li6 {
+      font-size: 15px;
+      color: #bbbb12; }
 
 .subtitulo2 {
   font-size: 20px;
@@ -213,19 +225,9 @@ article {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 0.1fr;
     grid-template-areas: "contenido contenido" "footer footer"; }
-  #carouselExampleIndicators {
-    height: 100vh;
-    margin-top: auto;
-    margin-bottom: auto; }
-  .slide {
-    height: 60vh !important;
-    width: 55vw !important;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid #000000; }
-    .slide img {
-      height: 59vh;
-      width: 54vw; } }
+    .container .tarjeta .card {
+      margin-right: auto;
+      margin-left: auto; } }
 
 @media screen and (min-width: 768px) {
   .container {
@@ -268,16 +270,4 @@ article {
     width: 16rem; }
   #exampleFormControlTextarea1 {
     width: 16rem;
-    height: 10rem; }
-  #carouselExampleIndicators {
-    height: min-content;
-    margin-top: auto;
-    margin-bottom: auto; }
-  .slide {
-    height: 60vh !important;
-    width: 55vw !important;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid #000000; }
-    .slide img {
-      height: 59vh; } }
+    height: 10rem; } }
