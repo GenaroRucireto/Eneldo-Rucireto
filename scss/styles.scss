@@ -7,6 +7,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	padding: 0;
 }
@@ -20,11 +21,13 @@ body {
 	font-family: "Quicksand-italic";
 	src: url("../fonts/Quicksand-Italic.otf");
 }
+
 @keyframes animTexto {
 	from {
 		margin-left: 100%;
 		width: 100%;
 	}
+
 	to {
 		margin-left: 0%;
 		width: 100%;
@@ -34,15 +37,17 @@ body {
 .container {
 	padding: 0;
 	max-width: 100%;
-	max-height: 100%;
+	min-height: 100%;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 1fr 0.1fr;
-	grid-template-areas: "contenido contenido" "footer footer";
+	grid-template-areas: "contenido contenido""footer footer";
+
 	.contenido {
 		grid-area: "contenido";
 		grid-column: 1/3;
 	}
+
 	.pie {
 		grid-area: "footer";
 		grid-column: 1/3;
@@ -53,10 +58,12 @@ body {
 		grid-area: "contenido";
 		grid-column: 1/3;
 	}
+
 	.lista1 {
 		grid-area: "contenido";
 		grid-column: 1/3;
 	}
+
 	.tarjeta {
 		grid-area: "contenido";
 		grid-column: 1/3;
@@ -71,50 +78,48 @@ body {
 	}
 }
 
-.tarjeta{
-	display: flex;
-	flex-direction: column;
-	.col{
-			display: flex;
-			justify-content: center !important;
-		}
-}
-	
-
 
 footer {
 	grid-area: "footer";
 	grid-column: 1/3;
 	display: flex;
 	justify-content: center;
-	background-color: map-get($colors,color-principal );
+	background-color: map-get($colors, color-principal);
+	min-width: 100%;
+
 }
+
 a {
 	text-decoration: none;
 	color: #000000;
 	font-size: 14px;
 	font-family: $fuente-principal;
-	background-image:linear-gradient(#bde0fe,#a2d2ff);
+	background-image: linear-gradient(#bde0fe, #a2d2ff);
 	background-position: 0% 100%;
 	background-repeat: no-repeat;
 	background-size: 0% 2px;
 	transition: background-size .3s;
+
 	&:hover {
 		background-size: 100% 2px;
 	}
+
 	&:focus {
 		background-size: 100% 2px;
 	}
 }
+
 h2 {
 	margin-top: 20px;
 }
+
 .nombre {
 	text-align: center;
 	margin-top: 10px;
 	font-family: $fuente-principal;
-	background-color:map-get($colors,color-principal);
+	background-color: map-get($colors, color-principal);
 	margin-top: 0;
+
 	h2 {
 		margin-top: 10px;
 		font-size: 1rem;
@@ -122,12 +127,14 @@ h2 {
 		margin-bottom: 0;
 	}
 }
+
 .img-fluid {
 	width: auto;
 	margin-top: 30px;
 	padding: 0;
 	height: 20rem;
 }
+
 .pie {
 	display: inline-block;
 	text-align: center;
@@ -135,30 +142,36 @@ h2 {
 	padding-left: 10px;
 	padding-bottom: 10px;
 	padding-right: 10px;
+
 	a {
 		width: 300px;
 		padding-right: 5px;
 		color: black;
 	}
+
 	legend {
 		font-size: 15px;
 	}
 }
+
 .presentacion {
 	text-align: justify;
 	display: inline;
 	width: 300px;
+
 	h2 {
 		text-align: center;
 		font-size: 25px;
 		font-family: $fuente-principal;
 	}
+
 	p {
 		padding-top: 10px;
 		text-align: center;
 		font-family: $fuente-secundaria;
 	}
 }
+
 p {
 	animation-duration: 4s;
 	animation-name: animTexto;
@@ -174,17 +187,20 @@ p {
 	padding-top: 10px;
 	margin-top: 40px;
 	border-radius: 10px;
-	background-color: map-get($colors,color-formulario);
+	background-color: map-get($colors, color-formulario);
+
 	legend {
 		text-align: center;
 		padding-bottom: 10px;
 		font-size: 15px;
 	}
+
 	p {
 		padding-top: 5px;
 		padding-bottom: 10px;
 		font-size: 10px;
 	}
+
 	textarea {
 		width: 10rem;
 		height: 5rem;
@@ -192,39 +208,45 @@ p {
 		border: 1px solid darkslateblue;
 	}
 }
+
 .contacto {
 	margin-bottom: 15px;
 }
 
 
 .mb-3 {
-	.botones{
+	.botones {
 		margin-top: 7px;
 		color: #000000;
 		text-align: center;
-		
+
 	}
+
 	.btn {
 		@extend .botones;
 		background-color: rgb(132, 200, 223);
-		border:solid 1px white;
-	
-		
+		border: solid 1px white;
+
+
 	}
 }
+
 article {
 	display: inline-block;
 	text-align: center;
 	padding-bottom: 100px;
+
 	h2 {
 		padding-bottom: 15px;
 	}
+
 	p {
 		font-size: 18px;
-		background-color: map-get($colors,fondo-parrafo);
+		background-color: map-get($colors, fondo-parrafo);
 		font-family: $fuente-principal;
 	}
 }
+
 .lista1 {
 	display: inline-block;
 	text-align: center;
@@ -232,39 +254,48 @@ article {
 	li {
 		padding: 3px;
 	}
+
 	ul {
 		padding-left: 0;
+
 		p {
 			padding-bottom: 3px;
 			padding-top: 3px;
 			font-size: 18px;
 			text-decoration: underline;
 		}
-		.li1{
-			@include lista(15px,green )
+
+		.li1 {
+			@include lista(15px, green)
 		}
-		.li2{
-			@include lista( 15px,rgb(46, 122, 46))
+
+		.li2 {
+			@include lista(15px, rgb(46, 122, 46))
 		}
-		.li3{
-			@include lista( 15px,rgb(13, 243, 13))
+
+		.li3 {
+			@include lista(15px, rgb(13, 243, 13))
 		}
-		.li4{
-			@include lista( 15px,rgb(4, 85, 4))
+
+		.li4 {
+			@include lista(15px, rgb(4, 85, 4))
 		}
-		.li5{
-			@include lista( 15px,rgb(132, 236, 132))
+
+		.li5 {
+			@include lista(15px, rgb(132, 236, 132))
 		}
-		.li6{
-			@include lista(15px,rgb(187, 187, 18))
-			
+
+		.li6 {
+			@include lista(15px, rgb(187, 187, 18))
 		}
 	}
 }
+
 .subtitulo2 {
 	font-size: 20px;
 	margin-bottom: 10px;
 }
+
 @media screen and (min-width: 577px) {
 	.container {
 		display: grid;
@@ -272,14 +303,16 @@ article {
 		width: 100vw;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 0.1fr;
-		grid-template-areas: "contenido contenido" "footer footer";
-	.tarjeta .card{
-		margin-right: auto;
-		margin-left: auto;
+		grid-template-areas: "contenido contenido""footer footer";
 
+		.tarjeta .card {
+			margin-right: auto;
+			margin-left: auto;
+
+		}
 	}
 }
-}
+
 @media screen and (min-width: 768px) {
 	.container {
 		display: grid;
@@ -287,59 +320,71 @@ article {
 		width: 100vw;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 0.1fr;
-		grid-template-areas: "contenido contenido" "footer footer";
+		grid-template-areas: "contenido contenido""footer footer";
+
 		.pie {
 			grid-area: "footer";
 			grid-column: 1/3;
 			margin-top: 1rem;
 		}
 	}
+
 	.presentacion {
 		h2 {
 			margin-top: 80px;
 		}
+
 		p {
 			justify-content: center;
 			margin-top: 20px;
 			width: auto;
 		}
 	}
+
 	footer {
 		grid-area: "footer";
 		grid-column: 1/3;
 	}
+
 	.nombre {
 		h1 {
 			font-size: 50px;
 		}
+
 		h2 {
 			font-size: 23px;
 		}
 	}
+
 	a {
 		font-size: 18px;
 	}
+
 	.d-flex {
 		width: 10rem;
 	}
+
 	article {
 		grid-area: "contenido";
 		grid-column: 1/3;
 	}
+
 	.consulta {
 		width: 20rem;
 		height: 25rem;
+
 		legend {
 			font-size: 20px;
 		}
 	}
+
 	.form-control {
 		width: 16rem;
 	}
+
 	#exampleFormControlTextarea1 {
 		width: 16rem;
 		height: 10rem;
 	}
-	
-}
 
+}
