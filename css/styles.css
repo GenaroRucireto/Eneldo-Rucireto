@@ -34,8 +34,7 @@ body {
   .container #carouselExampleControls {
     grid-area: "contenido";
     grid-column: 1/3;
-    grid-row: 1/2;
-    margin-top: 40px; }
+    grid-row: 1/2; }
   .container .contenido {
     grid-area: "contenido";
     grid-column: 1/3; }
@@ -52,7 +51,11 @@ body {
   .container .tarjeta {
     grid-area: "contenido";
     grid-column: 1/3; }
+    .container .tarjeta .card {
+      margin-left: auto;
+      margin-right: auto; }
   .container .contacto {
+    background-image: url(../imagenes/fondo2.webp);
     grid-area: "contenido";
     display: flex;
     justify-content: center;
@@ -82,9 +85,6 @@ a {
   a:focus {
     background-size: 100% 2px; }
 
-h2 {
-  margin-top: 20px; }
-
 .nombre {
   text-align: center;
   margin-top: 10px;
@@ -98,8 +98,7 @@ h2 {
     margin-bottom: 0; }
 
 .img-fluid {
-  width: auto;
-  margin-top: 30px;
+  width: max-content;
   padding: 0;
   height: 20rem; }
 
@@ -144,6 +143,7 @@ p {
   padding-top: 10px;
   margin-top: 40px;
   border-radius: 10px;
+  border: solid black 1px;
   background-color: #bbd2f5; }
   .consulta legend {
     text-align: center;
@@ -176,46 +176,32 @@ article {
   text-align: center;
   padding-bottom: 100px; }
   article h2 {
-    padding-bottom: 15px; }
+    font-family: "Quicksand";
+    padding-bottom: 15px;
+    margin-top: 30px; }
   article p {
     font-size: 18px;
     background-color: #caf0f8;
-    font-family: "Quicksand"; }
+    border-radius: 5px;
+    font-family: "Quicksand-italic"; }
 
 .lista1 {
   display: inline-block;
   text-align: center; }
-  .lista1 li {
-    padding: 3px; }
-  .lista1 ul {
-    padding-left: 0; }
-    .lista1 ul p {
-      padding-bottom: 3px;
-      padding-top: 3px;
-      font-size: 18px;
-      text-decoration: underline; }
-    .lista1 ul .li1 {
-      font-size: 15px;
-      color: green; }
-    .lista1 ul .li2 {
-      font-size: 15px;
-      color: #2e7a2e; }
-    .lista1 ul .li3 {
-      font-size: 15px;
-      color: #0df30d; }
-    .lista1 ul .li4 {
-      font-size: 15px;
-      color: #045504; }
-    .lista1 ul .li5 {
-      font-size: 15px;
-      color: #84ec84; }
-    .lista1 ul .li6 {
-      font-size: 15px;
-      color: #bbbb12; }
+  .lista1 .list-group-item {
+    background-color: #d4e6f7;
+    font-size: 20px;
+    font-family: "quicksand-italic"; }
 
 .subtitulo2 {
-  font-size: 20px;
-  margin-bottom: 10px; }
+  font-family: "quicksand";
+  font-size: 25px;
+  margin-bottom: 40px;
+  margin-top: 30px; }
+
+.lista2 {
+  margin-top: 100px;
+  margin-bottom: 30px; }
 
 @media screen and (min-width: 577px) {
   .container {
@@ -231,8 +217,7 @@ article {
     .container #carouselExampleControls {
       grid-area: "contenido";
       grid-column: 1/3;
-      grid-row: 1/2;
-      margin-top: 40px; }
+      grid-row: 1/2; }
       .container #carouselExampleControls img {
         height: 25rem; } }
 
@@ -281,7 +266,6 @@ article {
   #carouselExampleControls {
     grid-area: "contenido";
     grid-column: 1/3;
-    grid-row: 1/2;
-    margin-top: 40px; }
+    grid-row: 1/2; }
     #carouselExampleControls img {
       height: 35rem !important; } }
